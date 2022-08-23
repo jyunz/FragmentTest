@@ -18,7 +18,7 @@ val mList : List<Store>) : ArrayAdapter<Store>(mContext,resId,mList) {
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         var tempRow = convertView
         if (tempRow == null) {
-            tempRow = inflater.inflate(R.layout.fragment_second_list, null)
+            tempRow = inflater.inflate(R.layout.first_list_item, null)
         }
 
         val row = tempRow!!

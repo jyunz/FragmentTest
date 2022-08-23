@@ -1,6 +1,6 @@
 package com.roy.fragmenttest
 
-import android.support.v7.app.AppCompatActivity
+//import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import com.roy.fragmenttest.data.Store
 import kotlinx.android.synthetic.main.activity_view_detail.*

@@ -1,13 +1,17 @@
 package com.roy.fragmenttest.fragment
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.roy.fragmenttest.R
+import com.roy.fragmenttest.ViewDetailActivity
 import com.roy.fragmenttest.adapter.FirstAdapter
 import com.roy.fragmenttest.data.Store
+import kotlinx.android.synthetic.main.fragment_first_list.*
+import kotlinx.android.synthetic.main.fragment_second_list.*
 
 class FirstFragment : Fragment() {
 
@@ -33,6 +37,15 @@ class FirstFragment : Fragment() {
 
         mFirstStoreAdapter = FirstAdapter(requireContext(),R.layout.fragment_first_list, mFirstStoreDataList)
 
+        firstStoreListView.adapter = mFirstStoreAdapter
+
+        firstStoreListView.setOnItemClickListener { parent, view, position, id ->
+            val clickedStore = mFirstStoreDataList[position]
+
+            val myIntent = Intent(requireContext(), ViewDetailActivity::class.java)
+            myIntent.putExtra("storeData", clickedStore)
+            startActivity(myIntent)
+        }
     }
 
 }

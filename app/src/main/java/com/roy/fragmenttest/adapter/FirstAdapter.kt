@@ -19,7 +19,7 @@ class FirstAdapter(
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
         var tempRow = convertView
         if (tempRow == null) {
-            tempRow = inflater.inflate(R.layout.fragment_first_list,null)
+            tempRow = inflater.inflate(R.layout.first_list_item,null)
         }
 
         val row = tempRow!!
